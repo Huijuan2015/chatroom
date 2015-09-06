@@ -1,7 +1,7 @@
 @copyright Joan Peng
 # Chatroom - FSE PreH/W
 
-·GitHun Repository
+·GitHub Repository
 
     https://github.com/Huijuan2015/chatroom
     

@@ -13,7 +13,7 @@
 ·Database:Sqlite
 
 
-Features describe:
+·Features describe:
 
     ·Have a particular nick name
     

@@ -10,6 +10,8 @@
 
 ·Server Side: Node.js, express.js
 
+·Middleware：Socket.io, jQuery
+
 ·Database:Sqlite
 
 

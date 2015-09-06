@@ -29,6 +29,8 @@ Features describe:
     
     ·Display time of message
     
+    ·Read history message
+    
     ·Send & receive message dynamically
     
     ·Leave the room

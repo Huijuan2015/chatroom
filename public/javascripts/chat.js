@@ -79,10 +79,10 @@ $(document).ready(function() {
 
   function flushUsers(users) {
 
-    $("#list").empty().append('<li title="双击聊天" alt="all" class="sayingto" onselectstart="return false"> Public</li>');
+    $("#list").empty().append('<li title="Double Click" alt="all" class="sayingto" onselectstart="return false"> Public</li>');
 
     for (var i in users) {
-      $("#list").append('<li alt="' + users[i] + '" title="双击聊天" onselectstart="return false">' + users[i] + '</li>');
+      $("#list").append('<li alt="' + users[i] + '" title="Double Click" onselectstart="return false">' + users[i] + '</li>');
     }
 
     $("#list > li").dblclick(function() {

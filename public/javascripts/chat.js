@@ -10,6 +10,16 @@ $(document).ready(function() {
   var from = $.cookie('user');
   var to = 'all';
 
+    socket.on("history",function(data){
+        console.log(data);
+        if(data.length){
+            for(var i = data.length-1;i>-1;i=i-1){
+                $("#contents").append('<div class="saying"><span class="name">'+data[i].name+'</span><span style="font-size: 36px"> </span><span style="font-size: 12px">'+data[i].time+'</span><br/><h4>'+data[i].msg+'</h4></div><br/>');
+            }
+        }
+    });
+
+
   socket.emit('online', {user: from});
   socket.on('online', function (data) {
 

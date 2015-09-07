@@ -67,22 +67,6 @@ app.post('/signin', function (req, res) {
   }
 });
 
-/*app.get('/history', function (req,res) {
-  var data = sqliteDB.all(function (error, rows) {
-    if (error) throw error;
-    else {
-      console.info("select all from DB success");
-
-      res.json()
-    }
-
-  });
-
-}*/
-
-app.post('/history', function (req,res) {
-  res.sendfile('views/history.html')
-});
 
 
 var server = http.createServer(app);
@@ -91,6 +75,23 @@ var io = require('socket.io').listen(server);
 
 
 io.sockets.on('connection', function (socket) {
+
+
+    var history =[];
+    sqliteDB.forAll(function(error, row){
+        if(row!==undefined) {
+            var msg = {
+                name: row.name,
+                time: row.time,
+                content: row.content
+            };
+            history[history.length] = msg;
+        }
+    }, function(error){
+        if (error) throw error;
+        socket.emit("history",history);
+    });
+
 
   socket.on('online', function (data) {
      socket.name = data.user;

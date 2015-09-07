@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1197845762">
+    <data-source source="LOCAL" name="SQLite -" uuid="ae8e6003-5d75-4524-b4eb-eb63b4e4a485">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/chatroom.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>

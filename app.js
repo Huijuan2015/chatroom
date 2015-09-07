@@ -8,10 +8,6 @@ var express = require('express')
 
 var app = express();
 
-
-/**
- * set port 8080
- * */
 app.set('port', process.env.PORT || 5858);
 
 /**

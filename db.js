@@ -79,10 +79,10 @@ exports.delete = function(time, callback){
 
 exports.all = function(callback){
     util.log(' in all history');
-    db.all("SELECT * FROM history", callback);
+    db.all("SELECT * FROM history limit 30", callback);
 }
 exports.forAll = function(doEach, done){
-    db.each("SELECT * FROM history", function(err, row){
+    db.each("SELECT * FROM history order by time DESC limit 30", function(err, row){
         if (err){
             util.log('FAIL to retrieve row ' + err);
             done(err, null);

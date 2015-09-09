@@ -14,7 +14,7 @@ app.set('port', process.env.PORT || 5858);
  * set views  and view engine as jade
  * */
 app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
+app.set('view engine', 'jade');//?
 
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
